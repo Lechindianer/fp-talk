@@ -1,0 +1,1264 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <title>Functional Programming</title>
+  <meta name="description" content="Rule the world without side effects.">
+
+  <!-- URL CANONICAL -->
+  <!-- <link rel="canonical" href="http://your-url.com/"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext"
+    rel="stylesheet">
+
+  <!-- CSS WebSlides -->
+  <link rel="stylesheet" type='text/css' media='all' href="static/css/webslides.css">
+
+  <!-- Optional - CSS SVG Icons (Font Awesome) -->
+  <link rel="stylesheet" type='text/css' media='all' href="static/css/svg-icons.css">
+
+  <link rel="stylesheet" type='text/css' media='all' href="static/css/prism.css">
+
+  <!-- FAVICONS -->
+  <link rel="shortcut icon" sizes="16x16" href="static/images/favicons/favicon.png">
+  <link rel="shortcut icon" sizes="32x32" href="static/images/favicons/favicon-32.png">
+  <link rel="apple-touch-icon icon" sizes="76x76" href="static/images/favicons/favicon-76.png">
+  <link rel="apple-touch-icon icon" sizes="120x120" href="static/images/favicons/favicon-120.png">
+  <link rel="apple-touch-icon icon" sizes="152x152" href="static/images/favicons/favicon-152.png">
+  <link rel="apple-touch-icon icon" sizes="180x180" href="static/images/favicons/favicon-180.png">
+  <link rel="apple-touch-icon icon" sizes="192x192" href="static/images/favicons/favicon-192.png">
+
+  <!-- Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#333333">
+</head>
+
+<body>
+  <header role="banner">
+    <nav role="navigation">
+      <p class="logo"><a href="index.html" title="Functional Programming">Functional Programming</a></p>
+    </nav>
+  </header>
+
+  <main role="main">
+    <article id="webslides" class="vertical">
+      <!-- Quick Guide
+          - Each parent <section> in the <article id="webslides"> element is an individual slide.
+          - Vertical sliding = <article id="webslides" class="vertical">
+          - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
+        -->
+
+      <section class="slide-top">
+        <span class="background" style="background-image:url('static/images/background.jpg')"></span>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap aligncenter slide-top">
+          <h1 class="text-landing"><strong>Functional Programming</strong></h1>
+          <p class="text-intro">Rule the world without side effects.</p>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <div class="card-40">
+          <div class="content-center">
+            <figure>
+              <img src="./static/images/horse.png" alt="horse">
+              <figcaption>
+                <a href="https://blog.toggl.com/build-horse-programming/">Source</a>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <div class="wrap size-50 aligncenter">
+          <h2>Objektorientierung</h2>
+          <h3>Ein Angriff</h3>
+          <blockquote>
+            <p>
+              "The problem with object-oriented languages is they’ve got all this implicit environment that they
+              carry
+              around with them. You wanted a banana but what you got was a gorilla holding the banana and the entire
+              jungle."
+            </p>
+            <cite>
+              Joe Armstrong, co-inventor of Erlang
+            </cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="wrap size-50">
+          <ul class="work">
+            <li class="work-label">
+              <p class="work-work">Object oriented</p>
+              <p class="work-client">Functional</p>
+            </li>
+            <li>
+              <p class="work-work">Single Responsibility Principle</p>
+              <p class="work-client">Functions</p>
+            </li>
+            <li>
+              <p class="work-work">Open/Closed Principle</p>
+              <p class="work-client"></p>
+            </li>
+            <li>
+              <p class="work-work">Dependency Inversion Principle</p>
+              <p class="work-client"></p>
+            </li>
+            <li>
+              <p class="work-work">Interface Segregation Principle</p>
+              <p class="work-client"></p>
+            </li>
+            <li>
+              <p class="work-work">Factory pattern</p>
+              <p class="work-client"></p>
+            </li>
+            <li>
+              <p class="work-work">Strategy pattern</p>
+              <p class="work-client"></p>
+            </li>
+            <li>
+              <p class="work-work">Decorator pattern</p>
+              <p class="work-client"></p>
+            </li>
+            <li>
+              <p class="work-work">Visitor pattern</p>
+              <p class="work-client"></p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section class="slide">
+        <div class="wrap size-50">
+          <ul class="work">
+            <li class="work-label">
+              <p class="work-work">Object oriented</p>
+              <p class="work-client">Functional</p>
+            </li>
+            <li>
+              <p class="work-work">Single Responsibility Principle</p>
+              <p class="work-client">Functions</p>
+            </li>
+            <li>
+              <p class="work-work">Open/Closed Principle</p>
+              <p class="work-client">Functions</p>
+            </li>
+            <li>
+              <p class="work-work">Dependency Inversion Principle</p>
+              <p class="work-client"></p>
+            </li>
+            <li>
+              <p class="work-work">Interface Segregation Principle</p>
+              <p class="work-client"></p>
+            </li>
+            <li>
+              <p class="work-work">Factory pattern</p>
+              <p class="work-client"></p>
+            </li>
+            <li>
+              <p class="work-work">Strategy pattern</p>
+              <p class="work-client"></p>
+            </li>
+            <li>
+              <p class="work-work">Decorator pattern</p>
+              <p class="work-client"></p>
+            </li>
+            <li>
+              <p class="work-work">Visitor pattern</p>
+              <p class="work-client"></p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section class="slide">
+        <div class="wrap size-50">
+          <ul class="work">
+            <li class="work-label">
+              <p class="work-work">Object oriented</p>
+              <p class="work-client">Functional</p>
+            </li>
+            <li>
+              <p class="work-work">Single Responsibility Principle</p>
+              <p class="work-client">Functions</p>
+            </li>
+            <li>
+              <p class="work-work">Open/Closed Principle</p>
+              <p class="work-client">Functions</p>
+            </li>
+            <li>
+              <p class="work-work">Dependency Inversion Principle</p>
+              <p class="work-client">Functions</p>
+            </li>
+            <li>
+              <p class="work-work">Interface Segregation Principle</p>
+              <p class="work-client"></p>
+            </li>
+            <li>
+              <p class="work-work">Factory pattern</p>
+              <p class="work-client"></p>
+            </li>
+            <li>
+              <p class="work-work">Strategy pattern</p>
+              <p class="work-client"></p>
+            </li>
+            <li>
+              <p class="work-work">Decorator pattern</p>
+              <p class="work-client"></p>
+            </li>
+            <li>
+              <p class="work-work">Visitor pattern</p>
+              <p class="work-client"></p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section class="slide">
+        <div class="wrap size-50">
+          <ul class="work">
+            <li class="work-label">
+              <p class="work-work">Object oriented</p>
+              <p class="work-client">Functional</p>
+            </li>
+            <li>
+              <p class="work-work">Single Responsibility Principle</p>
+              <p class="work-client">Functions</p>
+            </li>
+            <li>
+              <p class="work-work">Open/Closed Principle</p>
+              <p class="work-client">Functions</p>
+            </li>
+            <li>
+              <p class="work-work">Dependency Inversion Principle</p>
+              <p class="work-client">Functions</p>
+            </li>
+            <li>
+              <p class="work-work">Interface Segregation Principle</p>
+              <p class="work-client">Functions</p>
+            </li>
+            <li>
+              <p class="work-work">Factory pattern</p>
+              <p class="work-client"></p>
+            </li>
+            <li>
+              <p class="work-work">Strategy pattern</p>
+              <p class="work-client"></p>
+            </li>
+            <li>
+              <p class="work-work">Decorator pattern</p>
+              <p class="work-client"></p>
+            </li>
+            <li>
+              <p class="work-work">Visitor pattern</p>
+              <p class="work-client"></p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section class="slide">
+        <div class="wrap size-50">
+          <ul class="work">
+            <li class="work-label">
+              <p class="work-work">Object oriented</p>
+              <p class="work-client">Functional</p>
+            </li>
+            <li>
+              <p class="work-work">Single Responsibility Principle</p>
+              <p class="work-client">Functions</p>
+            </li>
+            <li>
+              <p class="work-work">Open/Closed Principle</p>
+              <p class="work-client">Functions</p>
+            </li>
+            <li>
+              <p class="work-work">Dependency Inversion Principle</p>
+              <p class="work-client">Functions</p>
+            </li>
+            <li>
+              <p class="work-work">Interface Segregation Principle</p>
+              <p class="work-client">Functions</p>
+            </li>
+            <li>
+              <p class="work-work">Factory pattern</p>
+              <p class="work-client">Functions</p>
+            </li>
+            <li>
+              <p class="work-work">Strategy pattern</p>
+              <p class="work-client">Functions</p>
+            </li>
+            <li>
+              <p class="work-work">Decorator pattern</p>
+              <p class="work-client">Functions</p>
+            </li>
+            <li>
+              <p class="work-work">Visitor pattern</p>
+              <p class="work-client">Functions</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap size-50 aligncenter">
+          <div class="content-left">
+            <img src="static/images/smalltalk.jpg">
+            <figcaption>
+              <a href="https://medium.com/smalltalk-talk/make-smalltalk-great-again-images-7cb21cd10623">Source</a>
+            </figcaption>
+          </div>
+          <div class="content-left">
+            <h2>Objektorientierung</h2>
+            <h3>Eine Verteidigung</h3>
+            <blockquote>
+              <p>
+                "I made up the term object-oriented, and I can tell you I did not have C++ in mind."
+              </p>
+              <cite>
+                Alan Kay, co-inventor of Smalltalk
+              </cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap size-50 aligncenter">
+          <h2>
+            Functional Programming - neues Konzept?
+          </h2>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <h2 class="aligncenter">FP - neues Konzept?</h2>
+          <div class="content-left">
+            <h3>Talks</h3>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <h2>Purifying Typescript</h2>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>Functional programming in Rust</h2>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>Immutable data structures for functional JS</h2>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <div class="vertical-align"></div>
+            <video autoplay loop>
+              <source src="static/videos/sharknado.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap height-200">
+          <div class="content-left">
+            <figure>
+              <img src="./static/images/programming-evolution-perceived.png" alt="history perceived">
+            </figure>
+            <!-- end figure-->
+
+            <!-- end .flex-content-->
+          </div>
+          <div class="content-left">
+            <h2>
+              Entwicklung der Programmiersprachen
+            </h2>
+            <h3>Gefühlt</h3>
+          </div>
+          <!-- end .card-60-->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <div class="wrap height-200">
+          <div class="content-left">
+            <h2>
+              Entwicklung der Programmiersprachen
+            </h2>
+            <h3>Tatsächlich</h3>
+          </div>
+          <div class="content-left">
+            <figure>
+              <img src="./static/images/programming-evolution-actual.png" alt="history perceived">
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="wrap">
+          <div class="content-left">
+            <h2>
+              Lisp machine
+            </h2>
+            <a href="https://de.wikipedia.org/wiki/Lisp-Maschine">Source</a>
+          </div>
+        </div>
+        <span class="background-right" style="background-image:url('./static/images/lisp_machine.jpg')"></span>
+        <!-- .end .wrap -->
+      </section>
+
+      <section class="slide">
+        <div class="wrap">
+          <div class="content-left">
+            <h2>
+              Moore's Law
+            </h2>
+            <a href="https://www.extremetech.com/extreme/203490-moores-law-is-dead-long-live-moores-law">Source</a>
+          </div>
+        </div>
+        <span class="background-right" style="background-image:url('./static/images/moores_law.jpg')"></span>
+        <!-- .end .wrap -->
+      </section>
+
+      <section class="slide">
+        <div class="wrap">
+          <div class="content-left">
+            <h2>
+              Multithreading
+            </h2>
+            <a href="https://smyck.net/2012/04/22/why-erlang/">Source</a>
+          </div>
+          <div class="content-left">
+            <img src="./static/images/concurrent.jpg">
+          </div>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section class="slide">
+        <div class="wrap">
+          <div class="content-left">
+            <h2>
+              Multithreading
+            </h2>
+            <a href="https://phoenixframework.org/blog/the-road-to-2-million-websocket-connections">Source</a>
+          </div>
+        </div>
+        <span class="background-right" style="background-image:url('./static/images/elixir.png')"></span>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <div class="wrap aligncenter">
+          <h2>
+            Functional programming
+          </h2>
+          <div class=grid ms">
+            <div class=column>
+              <ul class="flexblock specs">
+                <li>Monads</li>
+                <li>Type classes</li>
+                <li>Endofunctors</li>
+                <li>Referential transparency</li>
+              </ul>
+            </div>
+            <div class=column>
+              <ul class="flexblock specs">
+                <li>Algebraic data types</li>
+                <li>Arity</li>
+                <li>Higher-order functions</li>
+                <li>Foldable</li>
+              </ul>
+            </div>
+            <div class=column>
+              <ul class="flexblock specs">
+                <li>Currying</li>
+                <li>Closure</li>
+                <li>Purity</li>
+                <li>Endomorphism</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap aligncenter">
+          <h2>
+            Definition
+          </h2>
+        </div>
+      </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="aligncenter">
+              <h2>FP - ein alter Vertrauter</h2>
+          </div>
+
+          <ul class="flexblock">
+            <li>
+                <pre><code class="javascript">
+for (i = 0; i < array.length; i++) {
+  pushToStructure(array[i]);
+}
+                          </code></pre>
+            </li>
+            <li>
+                <pre><code class="javascript">                    
+array.forEach(element => pushToStructure(element));
+                          </code></pre>
+            </li>
+          </ul>
+
+          <ul class="flexblock">
+              <li><pre><code class="javascript">                    
+for (i = 0; i < array.length; i++) {
+  newArray.push(array[i] * array[i] * array[i]);
+}
+              </code></pre></li>
+
+              <li><pre><code class="javascript">
+const numbers = [1, 2, 3, 4]
+
+const cubedNumbers = numbers.map(element => number * number * number);
+              </code></pre></li>
+            </ul>
+
+            <ul class="flexblock">
+                <li><pre><code class="javascript">var newArray = [];
+for (i = 0; i < array.length; i++) {
+  if (array[i] < 10) {
+    newArray.push(array[i]);
+  }
+}</code></pre></li>
+  
+                <li><pre><code class="javascript">
+const newArray = array.filter(element => element < 10);
+                </code></pre></li>
+              </ul>
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <div class="wrap size-50 aligncenter">
+          <h2>
+            Definition 1
+          </h2>
+          <blockquote>
+            <p>
+              "Eine Monade ist ein Monoid in der Kategorie der Endofunktoren"
+            </p>
+            <cite>
+              Extremly clever random guy
+            </cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap aligncenter">
+          <video autoplay loop>
+            <source src="static/videos/what.mp4" type="video/mp4">
+          </video>
+        </div>
+      </section>
+
+
+      <section>
+        <div class="wrap size-50 aligncenter">
+          <h2>
+            Definition 2
+          </h2>
+          <div class="content-left">
+            <div class="card-50 bg-white">
+              <h3>y = f(x)</h3>
+            </div>
+          </div>
+          <div class="content-left">
+            <figure>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Graph_describing_a_linear_function.svg" alt="function">
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap size-50 aligncenter">
+          <h2>Definition 3</h2>
+          <p class="description">Keine Seiteneffekte</p>
+          <img src="static/images/pipeline.png">
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap size-50 aligncenter">
+          <h2>
+            Definition 3
+          </h2>
+          <img src="static/images/pipeline_no_calls.png">
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap size-50 aligncenter">
+          <h2>
+            Definition 3
+          </h2>
+          <img src="static/images/pipeline_no_database.png">
+        </div>
+      </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="column aligncenter size-50">
+            <h2>Definition 3</h2>
+            <h3>Denkweise FP</h3>
+            <ul class="description">
+              <li>Data</li>
+              <li>Calculations</li>
+              <li>Actions</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+            <div class="column">
+              <h2>Denkweise FP</h2>
+              <p>Data</p>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <pre><code class="javascript">
+const docNumber = 11;
+
+const yell = 'Alons-y';
+
+const doctors = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+
+const recentDoctor = {
+  actor: 'Jodie Whittaker',
+  number: 13,
+  gender: 'Time lord'
+  level: 9001
+};
+              </code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+            <div class="column">
+              <h2>Denkweise FP</h2>
+              <p>Calculations</p>
+
+              <p><i>Data is Code - Code is Data</i></p>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <pre><code class="typescript">
+cube(x: number): number {
+  return x * x * x;
+}
+
+isValidEmail(email: string): boolean {
+  const mailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return mailRegex.test(email);
+}
+                </code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+            <div class="column">
+              <h2>Denkweise FP</h2>
+              <p>Actions</p>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <pre><code class="typescript">
+  sendMail(recipient: User): void {
+    [...]
+  }
+
+  getUser(id: userID): User {
+    return db.getUserById(id);
+  }
+                  </code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+            <div class="column">
+              <h2>Denkweise FP</h2>
+              <p>Data - Calculations - Actions</p>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <img src="static/images/data-calculations-actions.png" alt="data-calculations-actions">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+            <div class="column">
+              <h2>Definition - Eigenschaften</h2>
+              <p>First-class functions</p>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <pre><code class="javascript">
+const number = 4;
+
+const addOne = function (number) {
+  return number + 1;
+}
+
+const addTwo = function (number) {
+  return number + 2;
+}
+
+calculateSum(number, addOne, addTwo);</code></pre>
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+            <div class="column">
+              <h2>Definition - Eigenschaften</h2>
+              <p>Immutability</p>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <div class="row">
+                  <pre><code class="javascript">
+function doSomething(param) {
+  param = param + 1;                <--- NOT ALLOWED!
+}
+
+function doSomethingElse(obj) {
+  obj.count = 5;                    <--- NOT ALLOWED!
+  obj['anotherProp'] = [3, 2, 3];   <--- NOT ALLOWED!
+}
+                        </code></pre>
+                        </div>
+                        <div class="column">
+                            <pre><code class="javascript">
+function doSomething(param) {
+  const newParam = param + 1;
+}
+
+function doSomethingElse(obj) {
+  const newObject = Object.assign({}, obj, { count: 5 });
+  const newObject2 = Object.assign({}, obj, { anotherProp: [3, 2, 3] });
+}
+                  </code></pre></div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+            <div class="column">
+              <h2>Definition - Eigenschaften</h2>
+              <p>Stateless</p>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <pre><code class="javascript">
+
+function doNotModifyInput(param) {
+  global.myProperty = 5;                <-- Don't access global state
+}
+    </code></pre>
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+            <div class="column">
+              <h3>Object-Oriented</h3>
+            </div>
+            <!-- .end .column -->
+            <div class="column">
+              <pre><code>
+class PasswordTester {
+  private password: Password;
+  private email: Email;
+
+  constructor(password: Password, email: Email) {
+    this.password = password;
+    this.email = email;
+  }
+
+  public setPassword(password: Password) {
+    this.password = password;
+  }
+
+  public setEmail(email: Email) {
+    this.email = email;
+  }
+
+  public isInvalidPassword(): boolean {
+    return !this.password.contains(this.email);
+  }
+}
+</code></pre>
+            </div>
+            <!-- .end .column -->
+          </div>
+          <!-- .end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="grid vertical-align">
+            <!-- .end .column -->
+            <div class="column">
+              <pre><code class="javascript">
+  isInvalidPassword(password: Password, email: Email): boolean {
+    return !password.contains(email);
+  }
+  </code></pre>
+            </div>
+            <div class="column">
+              <h2>Functional</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+          <div class="wrap aligncenter size-30">
+            <h2>
+              Fazit
+            </h2>
+            <ul class="description">
+              <li>Einfacher Code: Input --> Output</li>
+              <li>Einfach zu debuggen</li>
+              <li>Einfach zu testen (Kein Mocking notwendig)</li>
+            </ul>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+      <section class="slide-top">
+        <span class="background" style="background-image:url('static/images/horrible_code.png')"></span>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap aligncenter slide-top bg-black size-20">
+          <h2 class="text-white">Horrible code</h1>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+
+      <section>
+        <div class="wrap">
+          <div class="content-left">
+            <figure>
+              <img src="./static/images/unstructured-code.png" alt="unstructured code">
+            </figure>
+          </div>
+          <div class="content-left">
+            <h2>
+              Guter Code?
+            </h2>
+            <ul class="description">
+              <li>Keine definierten Einstiegspunkte</li>
+              <li>Schwer zu debuggen</li>
+            </ul>
+          </div>
+          <!-- end .card-60-->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="content-left">
+            <video autoplay loop>
+              <source src="static/videos/goto.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="content-left">
+            <h2>Structured Programming</h2>          
+          </div>
+          <div class="content-left">
+            <blockquote>
+                <p>
+                  "Go To Statement Considered Harmful"
+                </p>
+                <cite>
+                  Edsger W. Dijkstra (1968)
+                </cite>
+              </blockquote>
+          </div>
+          <!-- end .card-60-->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <div class="wrap size-50 aligncenter">
+          <blockquote>
+            <p>
+              "Aber Pascal, wenn FP so cool ist, warum ist dann die ganze Welt nicht funktional?"
+            </p>
+            <cite>
+              Gerade jeder im Raum
+            </cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="aligncenter">
+        <div class="wrap">
+          <div class="text-serif">
+            <video autoplay loop>
+              <source src="static/videos/tardis.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- .end .content-right -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section>
+        <div class="wrap size-30 aligncenter">
+          <h2>Beispiele</h2>
+          <h3>Compiler</h3>
+          <ul class="flexblock specs">
+            <li><strong>Haskell</strong></li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap size-50 aligncenter">
+          <h2>Beispiele</h2>
+          <h3>Messaging</h3>
+          <div class="content-left">
+            <h4>Whatsapp (ca. 2016)</h4>
+            <ul class="flexblock specs">
+              <li>32 Entwickler</li>
+              <li>500 Millionen Nutzer</li>
+              <li>3 Server</li>
+              <li>50 Milliarden Nachrichten am Tag</li>
+              <li><strong>Erlang</strong></li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <h4>Discord</h4>
+            <ul class="flexblock specs">
+              <li>5.000.000 concurrent users</li>
+              <li><strong>Elixir</strong></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap size-30 aligncenter">
+          <h2>Beispiele</h2>
+          <h3>Pinterest</h3>
+          <ul class="flexblock specs">
+            <li>API Gateway</li>
+            <li>
+              <div>
+                <div style="display:inline">90% der Fälle: Response unter 800</div>
+                <div style="display:inline"><strong>microseconds</strong></div>
+              </div>
+            </li>
+            <li><strong>Elixir</strong></li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap size-30 aligncenter">
+          <h2>Beispiele</h2>
+          <h3>Spieleindustrie</h3>
+          <ul class="flexblock specs">
+            <li>Blizzard (Battle.net)</li>
+            <li>Call of Duty server</li>
+            <li><b>Erlang</b></li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section>
+        <div class="wrap size-50 aligncenter">
+          <h2>Beispiele</h2>
+          <h3>Netzwerkausstatter</h3>
+          <div class="content-left">
+            <h4>Cisco</h4>
+            <ul class="flexblock specs">
+              <li>90% gesamten Internettraffics</li>
+              <li><strong>Erlang</strong></li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <h4>Ericsson</h4>
+            <ul class="flexblock specs">
+              <li>40% weltweiter mobiler Netzwerkverkehr</li>
+              <li><strong>Erlang</strong></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap size-50 aligncenter">
+          <h2>Defizite</h2>
+          <ul class="flexblock specs">
+            <li>Nicht für (AAA)-Spieleprogrammierung</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap size-50 aligncenter">
+          <h2>FP in $YOUR_FAVOURITE_LANGUAGE</h2>
+          <blockquote>
+            <p>
+              "No matter what language you work in, programming in a functional style provides benefits. You should do
+              it whenever it is convenient, and you should think hard about the decision when it isn't convenient."
+            </p>
+            <cite>
+              John Carmack on functional programming in C++ (2012)
+            </cite>
+            <a href="http://www.gamasutra.com/view/news/169296/Indepth_Functional_programming_in_C.php">Source</a>
+          </blockquote>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="flex-content">
+            <h2>Links</h3>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <h2><a href="https://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming">A
+                        practical introduction to functional programming</a></h2>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h2><a href="https://fsharpforfunandprofit.com/">F# for fun and profit</a></h2>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h2><a href="https://lispcast.com/theory-functional-programming-0001/">A theory of functional
+                        programming</a></h2>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h2><a href="https://mostly-adequate.gitbooks.io/mostly-adequate-guide/">Professor Frisby's Mostly
+                        Adequate Guide to Functional Programming</a></h2>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h2><a href="https://github.com/hemanth/functional-programming-jargon">Functional programming
+                        jargon</a></h2>
+                  </div>
+                </li>
+              </ul>
+          </div>
+          <!-- .end card-50 -->
+        </div>
+      </section>
+
+
+      <section>
+        <div class="wrap">
+          <div class="flex-content">
+            <h2>Talks</h3>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <h2><a href="https://www.youtube.com/watch?v=7Zlp9rKHGD4">Robert C Martin - Functional Programming;
+                        What? Why? When?</a></h2>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h2><a href="https://www.youtube.com/watch?v=1qBHf8DrWR8">Why Functional Programming Matters - John
+                        Hughes, Mary Sheeran (first 20 minutes)</a></h2>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h2><a href="https://www.youtube.com/watch?v=GpXsQ-NIKXY">Functional Principles for Object-Oriented
+                        Development • Jessica Kerr</a></h2>
+                    <h3><a href="https://www.slideshare.net/jessitron/functional-principles-for-oo-developers">
+                        Talk slides</a>
+                    </h3>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h2><a href="https://www.youtube.com/watch?v=IcgmSRJHu_8">"Making Impossible States Impossible" by
+                        Richard Feldman</a></h2>
+                  </div>
+                </li>
+              </ul>
+          </div>
+          <!-- .end card-50 -->
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="wrap">
+          <h2>Books</h2>
+          <ul class="flexblock gallery">
+            <li>
+              <figure>
+                <img src="./static/images/books/functional_javascript.jpg">
+                <figcaption>
+                  <h3>Functional Javascript</h3>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="./static/images/books/domain_modelling.jpg">
+                <figcaption>
+                  <h3>Domain Modeling made functional</h3>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <a href="https://mitpress.mit.edu/sites/default/files/sicp/index.html">
+                <figure>
+                  <img src="./static/images/books/sicp.jpg">
+                  <figcaption>
+                    <h3>Structure and Interpretation of Computer Programs</h3>
+                  </figcaption>
+                </figure>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="aligncenter">
+        <div class="wrap">
+          <div class="text-serif">
+            <h2>
+              <strong>Thanks.</strong>
+            </h2>
+            <video autoplay loop>
+              <source src="static/videos/bye.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- .end .content-right -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+    </article>
+    <!-- end article -->
+  </main>
+  <!-- end main -->
+
+  <footer class="bg-white">
+    <!--.wrap o <nav> = container 1200px -->
+    <div class="wrap">
+      <p>
+        <span class="alignleft"><img src="static/images/logos/lambda_icon.jpg" alt="lambda icon"></span>
+        <span class="alignright">Pascal Schmid</span>
+      </p>
+    </div>
+  </footer>
+
+  <link rel="stylesheet" href="./static/css/default.css">
+  <script src="static/js/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+
+  <!-- Required -->
+  <script src="static/js/webslides.js"></script>
+  <script>
+    window.ws = new WebSlides();
+  </script>
+
+  <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+  <script defer src="static/js/svg-icons.js"></script>
+
+</body>
+
+</html>
